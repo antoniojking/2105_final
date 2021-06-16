@@ -10,4 +10,11 @@ describe Train do
     expect(train1.type).to eq('Tank')
     expect(train1.cargo).to eq({})
   end
+
+  it 'count_cars' do
+    train1 = Train.new({name: 'Thomas', type: 'Tank'})
+    car1 = Car.new({type: 'Mail', weight: 5})
+
+    expect(train1.count_cars(car1)).to eq(0)
+  end
 end
