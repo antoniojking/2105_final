@@ -8,6 +8,6 @@ class TrainYard
   end
 
   def add_train(train)
-    @trains << train 
+    @trains << train
   end
 end
