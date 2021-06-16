@@ -23,4 +23,12 @@ class TrainYard
       train if train.cargo.keys.include?(car)
     end
   end
+
+  def sorted_cargo_list
+    @trains.map do |train|
+      train.cargo.keys.map do |car|
+        car.type
+      end
+    end.flatten.uniq.sort
+  end
 end
