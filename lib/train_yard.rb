@@ -31,4 +31,15 @@ class TrainYard
       end
     end.flatten.uniq.sort
   end
+
+  def total_inventory
+    hash = Hash.new(0)
+
+    @trains.map do |train|
+      train.cargo.keys.map do |car|
+        require "pry"; binding.pry
+        hash[car]
+      end
+    end
+  end
 end
