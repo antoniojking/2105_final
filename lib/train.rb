@@ -10,6 +10,10 @@ class Train
   end
 
   def count_cars(car)
-    @cargo[:car]
+    @cargo[car]
+  end
+
+  def add_cars(car, car_count)
+    @cargo[car] += car_count
   end
 end
