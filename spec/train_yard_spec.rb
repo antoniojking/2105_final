@@ -38,4 +38,9 @@ describe TrainYard do
     expected = [train1, train2, train3, train4]
     expect(train_yard.trains).to eq(expected)
   end
+
+  it 'types_of_trains' do
+    
+    expect(train_yard.types_of_trains).to eq(['Express', 'Tank', 'Tender'])
+  end
 end

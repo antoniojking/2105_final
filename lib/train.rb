@@ -16,4 +16,11 @@ class Train
   def add_cars(car, car_count)
     @cargo[car] += car_count
   end
+
+  def weight
+    weight_array = @cargo.map do |car, car_count|
+      car.weight * car_count
+    end
+    weight_array.sum 
+  end
 end
